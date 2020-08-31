@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="calc.php" method="post" id='calcform'>
+<input type="text" name="num1" id="num1">
+<select name="op" id="op">
+    <option value="sum" id="sum">+</option>
+    <option value="dif">-</option>
+    <option value="mull">*</option>
+    <option value="del">/</option>
+</select>
+<input type="text" name="num2" id="num2">
+<input type="submit" value="OK">
+    </form>
+    <div id='response'></div>
+<script src="js/main.js"></script>
+</body>
+</html>
