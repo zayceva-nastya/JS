@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+
+        function Calc(a, b) {
+            this.a = a,
+                this.b = b,
+                this.mull = function () {
+                    return this.a * this.b
+                },
+                this.sum = function () {
+                    return this.a + this.b
+                },
+                this.read = function () {
+
+                }
+        }
+        // let c = new Calc(prompt("a"), prompt("b"))
+        // alert(c.mull())
+
+        function Acum(startValue = +prompt('start')) {
+            this.value = startValue,
+                this.read = function () {
+                    // this.value += +(prompt('num'))
+
+                }
+        }
+        let a = new Acum();
+        a.read()
+        // alert(a.value)
+        // console.log(a.value?.surname)
+        let n = 6e7;
+        let m = 6e-4
+        // alert(m);
+        let num55 = 200;
+        // alert(num55.toString(16))
+        // alert(12587..toString(8))
+        // alert(isFinite(15))
+        // alert(isFinite('15'))
+        // alert(isFinite(Infinity))
+        alert(parseFloat('158.3hh'))
+        alert(parseInt('158.3hh'))
+        alert(Math.random())
+        alert(Math.max(1,3,5,7,-1,15))
+        alert(Math.min(-3,5,7,45,-8))
+        alert(Math.pow(2,89))
+    </script>
+</body>
+
+</html>

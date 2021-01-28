@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="function.js"></script>
+    <script>
+        "use strict";
+        // alert('Я программирую на Java Script\nи это моя первая программа');
+        // console.log('kjjhdfjdh');
+        // console.log(alert('Syuyuy'));
+        /*переменные*/
+        // let name = 'Nastya',
+        //     age = 29,
+        //     single = true;
+
+        // console.log(typeof (name));
+        // console.log(typeof (age));
+        // console.log(typeof (single));
+
+        // console.log(`My name is ${name},i'm ${age} years old,my marital status ${single}`);
+        // console.log('Меня зовут ' + name + ' мне ' + age + ' лет ' + ' мое семейное положение ' + single)
+
+        /*constant*/
+        // const G = 8.8;
+        // let m = 70;
+        // let v = G*m;
+        // console.log(`при ускорении свободного падания = ${G} и массе = ${m} вес равен ${v} ньютонов`);
+        /*
+        /*преобразование типов*/
+        //    let a = "11.1";
+        //    let b = "22.2";
+        //    console.log(a+b);
+        //    a= +a;
+        //    console.log(typeof(a));
+        //    b= Number(b);
+        //    console.log(a+b);
+        /*арифметич операци*/
+        // console.log((8 + 15) / ((14 - 9) * (7.8 - 15 * 14)));
+        // let a = 8;
+        // let b = 15;
+        // let c = 14;
+        // let d = 9;
+        // let e = 7.8;
+        // console.log((a + b) / ((c - d) * (e - b * c)));
+        // let one = "12",
+        //     two = "40";
+        //     console.log(one + two);
+        //     console.log(Number(one) + Number(two));
+        /*операторы сравнения*/
+        // let bool_1 = 100 * 200 > 200 * 100;
+        // console.log(bool_1);
+        // let bool_2 = 300 > 400;
+        // console.log(bool_2);
+        // console.log(0 == false);
+        // console.log(0 === false);//здесь сравниваются и типы
+        /*огические операции*/
+        // let a = (5 < 6 || (true && (5 >= 5 && (false || true) && (true && true))));
+        // console.log(a);
+        /*услоыный оператор*/
+
+        // let b = false;
+        // if (b == false) alert("i am wooman");
+        // else alert("i am men");
+
+        // let age = 29;
+
+        // let res1 = (age < 18) ? 'у меня юнный возрвст' : (age > 18 && age <= 30) ? 'я молодой' : (age >
+        //     31 && age <= 50) ? 'я взрослый' : (age > 51 && age <= 80) ? 'я зрелый' : 'я старый';
+        // console.log(res1);
+        // let res;
+        // if (age < 18) res = 'у меня юнный возрвст';
+        // else if (age > 18 && age <= 30) res = 'я молодой';
+        // else if (age >= 31 && age <= 50) res = 'я взрослый';
+        // else if (age > 51 && age <= 80) res = 'я зрелый';
+        // else res = 'я старый';
+        // console.log(res);
+        /*prompt alert confirm*/
+        // if(confirm("Do you want question?")){
+        //       let age = +prompt("Введите свой возраст");
+        // if (Number.isNaN(age)) alert("no correct");
+        // else alert(age);
+        // }
+        /*циклы*/
+        // let i = 1;
+        // for (; i <= 10; i++) {
+        //     console.log('hello');
+        // }
+        // i = 1;
+        // while (i <= 10) {
+        //     console.log('good day');
+        //     i++;
+        // }
+        // i = 1;
+        // do {
+        //     console.log('hello world');
+        //     i++;
+        // } while (i <= 10);
+        // let k = 1,
+        //     j = 6;
+        // for (k; k <= 5; k++) {
+        //     console.log(k);
+        //     console.log("=====");
+        //     for (j; j >= 0; j--) {
+        //         console.log(j);
+        //     }
+
+        // }
+        /*switch-case*/
+        // let b = +prompt("Введите целое число от 1 до 5");
+        // switch (b) {
+        //     case 1:
+        //     console.log("один")                
+        //         break;
+        //         case 2:
+        //     console.log("два")                
+        //         break;
+        //         case 3:
+        //     console.log("три")                
+        //         break;
+        //         case 4:
+        //     console.log("четыре")                
+        //         break;
+        //         case 5:
+        //     console.log("пять")                
+        //         break;
+
+        //     default:
+        //     console.log("нет текстового предстaвления этого числа");
+        //         break;
+        // }
+        /*function*/
+
+
+        // function numb(a) {
+        //     let str = '';
+        //     if (a == 1) {
+        //         str = "one"
+        //     } else if (a == 2) {
+        //         str = "two"
+        //     } else if (a == 3) {
+        //         str = "three"
+        //     } else {
+        //         str = "нет такого числа";
+        //     }
+
+        //     return str;
+        // }
+
+        // function isCorrect(x) {
+        //     let result;
+        //     if (x != '' && x >= 0 && !Number.isNaN(x)) {
+        //         result = true;
+        //     } else {
+        //         result = false;
+        //     }
+        //     return result;
+        // }
+
+        // let n;
+        // do {
+        //     n = +prompt('введите число');
+        //     alert(numb(n))
+        // }
+        // while (isCorrect(n)) {}
+
+        // while (true) {
+        //     n = +prompt('введите число');
+        //     alert(numb(n));
+        //     if (Number.isNaN(n)) {
+        //         alert("no correct");
+        //         continue;
+        //     }
+        //     if (n == (-1)) {
+        //         break;
+        //     }
+        // }
+        /*function expretion*/
+        function suc(name) {
+            alert(`Спасибо ${name}!`);
+        }
+
+        function er() {
+            alert('не корректный ввод');
+        }
+
+        function checkName(name, s, c) {
+            if (name.length > 2) {
+                s(name);
+            } else {
+                c();
+            }
+        }
+
+        // let name = prompt("Enter your name:");
+        // checkName(name, suc, er);
+
+
+        function error() {
+            console.log("no corect");
+        }
+        let error1 = () => console.log("no correct"); //стрелочная функция
+        // error("ошибка");
+
+        function ysumma(a, b, c) {
+
+            if (!Number.isNaN(a) && !Number.isNaN(b)) alert(a + b);
+            else c();
+
+        }
+        // let x = +prompt("Введите первое число");
+        // let y = +prompt("Введите второе число");
+        // ysumma(x, y, error1())
+        /*try-catch*/
+        function plus(a, b) {
+            let result;
+            try {
+
+                if (Number.isNaN(a) && Number.isNaN(b)) throw new Error(error1());
+                result = a + b;
+                return result;
+            } catch (error) {
+                console.log(error)
+            } finally {
+                console.log("Завершаем выполнение функции");
+            }
+        }
+        // let p = +prompt("Enter first number");
+        // let o = +prompt("Enter second number");
+
+        // alert(plus(p, o));
+        /*arrays*/
+        function getMinVal(arr) {
+            let min = arr[0];
+            for (let elem of arr) {
+                if (elem < min) {
+                    min = elem;
+                }
+            }
+            return min;
+        }
+
+        function getMinVal2(arr) {
+            let min = arr[0][0];
+            for (let row in arr) {
+                for (let col in arr[row]) {
+                    if (arr[row][col] < min) {
+                        min = arr[row][col];
+                    }
+                }
+
+            }
+            return min;
+        }
+        // console.log(getMinVal([10, 5, 1, 7, 8, 25, 50, 100, 3, 0]))
+        // console.log(getMinVal2([[1,10,20],[7,89,0]]))
+        /*замыкание функций*/
+        let count = 0;
+        let Icounter = 0;
+
+        function addCounter(Iconter) {
+            Icounter++;
+            return count++;
+
+        }
+        addCounter(Icounter);
+        // console.log(count);
+        addCounter(Icounter);
+        // console.log(count);
+        addCounter(Icounter);
+        // console.log(count);
+        // console.log(Icounter);
+        // addCounter(count);
+        // console.log(addCounter(counter))
+        console.time('firstWay')
+        console.log(getMin([1, 2, 3, 5, 7, 9, 0]));
+        console.log(getMax([1, 2, 3, 5, 7, 9, 0]));
+        console.log(getSum([1, 2, 3]));
+        console.timeEnd('firstWay');
+    </script>
+</body>
+
+</html>

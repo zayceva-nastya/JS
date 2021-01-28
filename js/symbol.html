@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        let obj = {
+            from: 0,
+            to: 12,
+            [Symbol.iterator]() {
+                return {
+                    curent: this.from,
+                    finish: this.to,
+                    next() {
+                        return {
+                            done: this.curent > this.finish,
+                            value: this.curent++
+                        }
+                    }
+                }
+            }
+        }
+        for (let val of obj) {
+            console.log(val)
+        }
+    </script>
+</body>
+
+</html>

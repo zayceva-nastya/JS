@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        // let a = +prompt("a")
+        // let b = +prompt('b')
+        // alert(a+b)
+
+        function readNumber() {
+            let n
+            do {
+                n = prompt('n')
+            }
+            while (!isFinite(n))
+            if (n === null || n === '') return null
+            return +n
+        }
+        // alert(`number + ${readNumber()}`)
+        function random(a, b) {
+
+        }
+        //toUpperCase*/
+
+        function ucFirst(str) {
+            if (!str) {
+                return str
+            }
+            return str[0].toUpperCase() + str.slice(1)
+        }
+        /*check spam*/
+        function checSpam(str) {
+            let d = ''
+            if (str.includes('viagra') || str.includes('XXX')) {
+                d = true
+            } else d = false
+            return d
+        }
+        console.log(checSpam('shdsh hjjh  '))
+
+        /*length str*/
+        function truncate(str, maxLength) {
+            if (str.length > maxLength) {
+                return str.slice(0, maxLength) + "..."
+            }
+        }
+        console.log(truncate('hdhdsgfsjd hjhfgsjhg hghdghg hghdgshg ', 20))
+        /*выделить число из цены*/
+        function checkPrice(str) {
+            return +str.slice(1)
+        }
+        console.log(checkPrice('$158'))
+        /*array*/
+        let arr = ['POP', 'DJas']
+        arr.push('tehno')
+        // alert(arr)
+        arr[Math.floor((arr.length - 1) / 2)] = 'Classic'
+        // alert(arr)
+        arr.unshift('REGGI')
+        arr.unshift('RAP')
+
+        // alert(arr)
+        /*summa v arr*/
+        function sumInput() {
+
+            let numbers = [];
+
+            while (true) {
+
+                let value = prompt("Введите число", 0);
+
+                // Прекращаем ввод?
+                if (value === "" || value === null || !isFinite(value)) break;
+
+                numbers.push(+value);
+            }
+
+            let sum = 0;
+            for (let number of numbers) {
+                sum += number;
+            }
+            return sum;
+        }
+
+        function sumInput2() {
+            let arr = []
+
+            while (true) {
+                let value = prompt("n", 0)
+                if (value === "" || value === null || !isFinite(value)) break;
+                arr.push(+value);
+            }
+            let sum = 0;
+            for (let elem of arr) {
+                sum += elem
+            }
+            return sum
+        }
+        // alert(sumInput2())
+        /*макс сумма подстроки*/
+        function getMaxSubSum(arr) {
+            let maxSum = 0; // если элементов не будет - возвращаем 0
+
+            for (let i = 0; i < arr.length; i++) {
+                let sumFixedStart = 0;
+                for (let j = i; j < arr.length; j++) {
+                    sumFixedStart += arr[j];
+                    maxSum = Math.max(maxSum, sumFixedStart);
+                }
+            }
+
+            return maxSum;
+        }
+
+        function maxSummArr(arr) {
+            let maxSum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                let sumFixedStart = 0
+                for (let j = i; j < arr.length; j++) {
+                    sumFixedStart += arr[j]
+                    maxSum = Math.max(maxSum, sumFixedStart);
+                }
+            }
+            return maxSum
+        }
+        alert(getMaxSubSum[1, 2, 3, -8, 11, 125, -2, 6])
+    </script>
+</body>
+
+</html>

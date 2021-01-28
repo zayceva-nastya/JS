@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        /*1*/
+        let user = {};
+        user.name = "John";
+        user.surname = "Smith";
+        console.log(user.name);
+        user.name = "Pete";
+        console.log(user.name);
+        user['tere'] = "kiki";
+        delete(user.tere);
+        for (let key in user) {
+            console.log(key + "\t" + user[key]);
+        }
+
+        /*2*/
+        function isEmpty(obj) {
+            let str = '';
+            for (let key in obj) {
+                return false;
+            }
+            return true;
+        }
+        let obj = {};
+        // console.log(isEmpty(obj));
+        obj.name = 'juy';
+        // console.log(isEmpty(obj));
+        /*3*/
+        let team = {
+            'John': 100,
+            'Ann': 160,
+            'Pete': 130
+        }
+        let sum = 0;
+        for (let key in team) {
+            sum += team[key];
+        }
+        // console.log(sum);
+        /*4*/
+        let menu = {
+            "width": 200,
+            "height": 300,
+            "title": "my menu"
+        }
+        menu.text = prompt("Введите что-нибудь");
+        menu.num = prompt("Введите number") * 3;
+
+
+        for (let key in menu) {
+            if (typeof (menu[key]) == 'number') {
+
+                menu[key] = menu[key] * 2;
+            }
+            // console.log(menu[key]);
+        }
+        /*clone*/
+        let neww = {
+            'name': "Иван",
+            'age': 30
+        };
+
+        let clone = Object.assign({}, neww);
+        console.log(clone.name)
+    </script>
+</body>
+
+</html>

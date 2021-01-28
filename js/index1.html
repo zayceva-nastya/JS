@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="function.js"></script>
+    <script>
+        while (true) {
+            let a = +prompt("Введите первое число");
+            let c = prompt("Введите операцию(+- / *) или Exit ")
+            let b = +prompt("Введите второе число");
+            try {
+                if (Number.isNaN(a) || Number.isNaN(b)) throw new Error("Подумайте");
+                if (c == '+') alert(`${a}+${b}=` + summa(a, b));
+                if (c == '-') alert(`${a}-${b}=` + def(a, b));
+                if (c == '*') alert(`${a}*${b}=` + mult(a, b));
+                if (c == 'Exit') break;
+                if (c == '/') {
+                    try {
+                        if (b == 0) throw new Error("На ноль делить нельзя");
+                        alert(`${a}/${b}=` + div(a, b));
+
+                    } catch {
+                        alert(error);
+                    }
+                }
+
+            } catch (error) {
+                alert(error);
+            }
+
+
+        }
+
+
+
+
+
+        // switch (c) {
+        //     case '+':
+        //         alert(summa(a, b));
+        //         break;
+        //     case '-':
+        //         alert(def(a, b));
+        //         break;
+        //     case '*':
+        //         alert(mult(a, b));
+        //         break;
+        //     case '/':
+        //         alert(div(a, b));
+        //         break;
+        //     case 'Exit':
+        //         break;
+
+        //     default:
+        //         break;
+        // }
+    </script>
+</body>
+
+</html>
