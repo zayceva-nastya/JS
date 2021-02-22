@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        const set = new Set([1,1,1,1,1,2,3,4,4,4,4,5,6,8,9])
+        console.log(set)
+        set.add(10)
+        console.log(set)
+        /*задачи map set learnJS*/
+        function uniq(arr){
+            return [... new Set(arr)]
+        }
+        alert(uniq(["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+]))
+function clearAnagramma(arr){
+    let anagrama = new Map()
+    for(let word of arr){
+        let sort = word.toLowerCase().split('').sort().join('')
+        anagrama.set(sort,word)
+    }
+    return [...anagrama.values()]
+}
+alert(clearAnagramma(["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"]))
+
+    </script>
+    
+</body>
+</html>

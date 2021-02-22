@@ -10,6 +10,11 @@
 <body>
     <script>
         "use strict"
+        const obj = {
+            name:"Bot",
+            age:30,
+            job:'botbotich'
+        }
         let mappp = new Map
         mappp.set("one", "один")
             .set(2, "два")
@@ -23,7 +28,35 @@
             for(let c of mappp){
                 console.log(c)
             }
+            mappp.set(obj,'value of obj')
+        
+        console.log(mappp.get(obj))
+        for (let entry of mappp.entries()){
+            console.log(entry)
+        }
+        let array = [...mappp]
+        console.log(array)
+        let arr2 = Array.from(mappp)
+        console.log(arr2)
+        const abject = Object.fromEntries(mappp.entries())
+        console.log(abject)
+        /*examp*/
 
+        const user = [
+            {name: 'Kate'},
+            {name:'Sara'},
+            {name: 'Irina'}
+        ]
+        const visits = new Map()
+        visits
+        .set(user[0], new Date())
+        .set(user[1],new Date(new Date().getTime()+10000*60))
+        .set(user[2],new Date(new Date().getTime()+50000*60))
+
+        function lastVisit(user){
+            return visits.get(user)
+        }
+        alert(lastVisit(user[0]))
     </script>
 </body>
 

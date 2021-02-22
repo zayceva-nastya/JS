@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        let cache = new WeakMap()
+
+function cacheUsers(user){
+    if(!cache.has(user)){
+        cache.set(user,Date.now())
+    }
+    return cache.get(user)
+}
+
+let kate = {name: 'Kate'}
+let brawn ={name: "Brown"}
+cacheUsers(kate)
+cacheUsers(brawn)
+brawn=null
+console.log(cache.get(brawn))
+    </script>
+</body>
+</html>
